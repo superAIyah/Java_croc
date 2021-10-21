@@ -1,0 +1,29 @@
+package task5;
+
+public class Circle extends Figure{
+    public int x;
+    public int y;
+    public int r;
+
+    public  Circle(int x, int y, int r) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+    }
+
+    @Override //переопределение метода класса Object
+    public String toString() {
+        return String.format("C (%d, %d), %d", this.x, this.y, this.r);
+    }
+
+    @Override // переопределение метода интерфейса Movable
+    public void move(int dx, int dy) {
+        this.x += dx;
+        this.y += dy;
+    }
+
+    @Override // переопределение метода класса Figure
+    public boolean contains(int x, int y) {
+        return dist(x, y, this.x, this.y) <= r;
+    }
+}
