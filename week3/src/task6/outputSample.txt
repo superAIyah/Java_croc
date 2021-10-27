@@ -1,0 +1,15 @@
+
+class Hello { 
+
+  
+  public static void main(String[] args) {
+    
+    System.out.println("Hi!"); 
+    System.out.println("/* this is just a string not a comment */"); 
+    System.out.println("// this is also just a string not a comment!!!");
+    System.out.println("// this is also just a string not a comment!!!");
+    System.out.println("simple quote \" <- this is not end of the string");
+    System.out.println("\\") 
+    
+  }
+} 
