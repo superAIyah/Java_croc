@@ -2,6 +2,8 @@ package task8;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) throws Exception{
@@ -10,13 +12,15 @@ public class Main {
         String path = console.nextLine();
         String prefix = "src/task8/";  // по умолчанию JVM считает путь от папки корневого модуля
         path = prefix + path;
+
+        Pattern pattern = Pattern.compile("[а-яА-Яa-zA-Z]+-?[а-яА-Яa-bA-B]*");
+
         try (BufferedReader r = new BufferedReader(new FileReader(path))) { // буферизация потока для ускорения ввода
             String line;
             int cnt = 0; // суммарное количество слов
             while ((line = r.readLine()) != null) {
-                if (line.isEmpty())
-                    continue;
-                cnt += line.split("\\s+").length;
+                Matcher countWordMatcher = pattern.matcher(line);
+                cnt += countWordMatcher.results().count();
             }
             System.out.println("There are "+cnt+" words in file "+path);
         }
