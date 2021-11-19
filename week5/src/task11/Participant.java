@@ -16,7 +16,7 @@ public class Participant {
     public void randomBet() { // участник делает случайную ставку от 0 до его бюджета
         BigDecimal rand = new BigDecimal(Math.random());
         BigDecimal value = rand.multiply(budget);
-        lot.SetLot(name, value); // попытка перебить ставку
+        lot.setLot(name, value); // попытка перебить ставку
     }
 
     public String getName() {

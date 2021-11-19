@@ -5,9 +5,9 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 public class AuctionLot {
-    private BigDecimal price;
-    private String name;
-    public volatile Calendar endTime; // не кешировать окончание лота, для проверки в главном потоке
+    private volatile BigDecimal price; // Критическая секция
+    private volatile String name;      // доступ из разных потоков производится к общим ресурсам
+    public volatile Calendar endTime;  // не кешировать окончание лота, для проверки в главном потоке
 
     private void setEndTime() { // функция изменения времени конца аукицона
         Calendar now = Calendar.getInstance();
@@ -21,13 +21,18 @@ public class AuctionLot {
         setEndTime();
     }
 
-    public synchronized void SetLot(String name, BigDecimal startPrice) { //happens-before
-        // если старая ставка меньше и мы ставим на лот то окончания дедлайна
-        if (this.price.compareTo(startPrice) < 0 && GregorianCalendar.getInstance().before(endTime)) {
+    private synchronized void bet(String name, BigDecimal newPrice) { // т.к. из не synchronised перешли в synchronised
+        if (this.price.compareTo(newPrice) < 0 && GregorianCalendar.getInstance().before(endTime)) { // совершаем доп. проверку
             this.name = name;
-            this.price = startPrice;
+            this.price = newPrice;
             setEndTime();
         }
+    }
+
+    public void setLot(String name, BigDecimal startPrice) { //happens-before
+        // если старая ставка меньше и мы ставим на лот то окончания дедлайна
+        if (this.price.compareTo(startPrice) < 0 && GregorianCalendar.getInstance().before(endTime))
+            bet(name, startPrice);
     }
 
     public String getWinner() {
