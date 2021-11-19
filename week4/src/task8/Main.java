@@ -13,7 +13,7 @@ public class Main {
         String prefix = "src/task8/";  // по умолчанию JVM считает путь от папки корневого модуля
         path = prefix + path;
 
-        Pattern pattern = Pattern.compile("[а-яА-Яa-zA-Z]+-?[а-яА-Яa-bA-B]*");
+        Pattern pattern = Pattern.compile("[а-яА-Яa-zA-Z]+-?[а-яА-Яa-zA-Z]*");
 
         try (BufferedReader r = new BufferedReader(new FileReader(path))) { // буферизация потока для ускорения ввода
             String line;
