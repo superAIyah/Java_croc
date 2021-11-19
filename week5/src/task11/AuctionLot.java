@@ -36,6 +36,8 @@ public class AuctionLot {
     }
 
     public String getWinner() {
+        if (GregorianCalendar.getInstance().before(endTime)) // если аукцион еще не кончился
+            return  null; // победителя еще нет
         return this.name;
     }
 
