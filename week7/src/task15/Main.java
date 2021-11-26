@@ -26,17 +26,9 @@ public class Main {
         String com3 = "Normal\n"+
                 "comment\n"+
                 "correct for all predicates!";
-        /* ---- я не нашел норм способы как задать список явно- ---
-           ---- напишите пож, если такие есть ---- */
-        ArrayList<String> comments = new ArrayList<>();
-        comments.add(com1);
-        comments.add(com2);
-        comments.add(com3);
 
-        HashSet<String> badWords = new HashSet<>(); // создадим черный список слов
-        badWords.add("bad");
-        badWords.add("good");
-        badWords.add("word");
+        ArrayList<String> comments = new ArrayList<>(List.of(com1, com2, com3));  // создадим список комментариев
+        HashSet<String> badWords = new HashSet<>(List.of("bad", "good", "word")); // создадим черный список слов
 
         System.out.println("TEST1"); // тестируем
         List<String> res1 = filter.filterComments(comments, PredWordCheck);
