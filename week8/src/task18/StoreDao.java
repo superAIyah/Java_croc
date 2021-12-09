@@ -1,12 +1,9 @@
-package task19;
-
-import org.h2.mvstore.db.Store;
+package task18;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class StoreDao {

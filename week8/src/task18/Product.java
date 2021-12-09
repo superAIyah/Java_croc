@@ -1,4 +1,4 @@
-package task19;
+package task18;
 
 public class Product {
     public String article;
