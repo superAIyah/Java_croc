@@ -1,16 +1,19 @@
 # Java CROC course
 
+<img hspace="10" vspace="10" align="right" src="https://media.giphy.com/media/QkU3FDneBnY5mtM8T9/giphy.gif">
+
 ### Структура репозитория:
 В каждой папке `week` находятся:
 * Домашнее задание за эту неделю
 * Лекции
 * Конспекты лекций
 
+
 ### Домашние задания
 * [Задачи](https://docs.google.com/document/d/1XsrI44ARwEgn32biTIzMa4qS1-_o7lmo_EGfGzlZxjE/edit)
 
 ### Итоговый проект
-* Написание бота для Agario/Packman игры. Серверная часть реализована командой разработчиков CROC: [репозиторий всего проекта](https://github.com/superAIyah/hypernull).
+* Написание бота для Agario/Packman игры. Серверная часть и player реализована командой разработчиков CROC: [репозиторий всего проекта](https://github.com/superAIyah/hypernull).
 * Логика бота реализована мной:
 [Код бота](https://github.com/superAIyah/hypernull/blob/master/starter-bot/src/main/java/ru/croccode/hypernull/bot/superAIyah.java)
 
