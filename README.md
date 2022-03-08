@@ -13,7 +13,7 @@
 * [Задачи](https://docs.google.com/document/d/1XsrI44ARwEgn32biTIzMa4qS1-_o7lmo_EGfGzlZxjE/edit)
 
 ### Итоговый проект
-* Написание бота для Agario/Packman игры. Серверная часть и player реализована командой разработчиков CROC: [репозиторий всего проекта](https://github.com/superAIyah/hypernull).
+* Написание бота для Agario/Packman игры. Серверная часть и player реализована командой разработчиков CROC: [репозиторий всего проекта](https://github.com/nypi/hypernull).
 * Логика бота реализована мной:
 [Код бота](https://github.com/superAIyah/hypernull/blob/master/starter-bot/src/main/java/ru/croccode/hypernull/bot/superAIyah.java)
 
