@@ -1,7 +1,5 @@
 # Java CROC course
 
-<img hspace="10" vspace="10" align="right" src="https://media.giphy.com/media/QkU3FDneBnY5mtM8T9/giphy.gif">
-
 ### Структура репозитория:
 В каждой папке `week` находятся:
 * Домашнее задание за эту неделю
@@ -16,6 +14,8 @@
 * Написание бота для Agario/Packman игры. Серверная часть и player реализована командой разработчиков CROC: [репозиторий всего проекта](https://github.com/nypi/hypernull).
 * Логика бота реализована мной:
 [Код бота](https://github.com/superAIyah/hypernull/blob/master/starter-bot/src/main/java/ru/croccode/hypernull/bot/superAIyah.java)
+
+<img hspace="10" vspace="10" align="right" src="https://media.giphy.com/media/QkU3FDneBnY5mtM8T9/giphy.gif">
 
 ### Результаты
 * 98/100 баллов :trophy:
